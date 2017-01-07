@@ -99,7 +99,48 @@
         height:340px;
 }
 
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
 
+.flip-container, .front, .back {
+  width: 320px;
+  height: 215px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
 
 </style>
   <title>GusacHome</title>
@@ -186,7 +227,7 @@
   
   <div class="container">
     <div class="row" margin=10px>
-      <div class="col-xs-6" style="background-color:lavender;">
+      <div class="col-sm-6" style="background-color:lavender;">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
   
   <ol class="carousel-indicators">
@@ -248,7 +289,7 @@
   </a>
 </div>
     </div>
-    <div class="col-xs-6">
+    <div class="col-sm-6">
     <div class="embed-responsive embed-responsive-16by9">
  
     <iframe  src="https://www.youtube.com/embed/LgPolvEThD4" frameborder="0" class="embed-responsive-item" allowfullscreen></iframe>
@@ -269,38 +310,65 @@
 
 
 
-
-
-
 <section id="Events" class="h-100 container">
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
+        <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
         <img src="a.jpeg" alt="Lights" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
-        <img src="b.jpeg" alt="Nature" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+         <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+        <img src="b.jpeg" alt="Lights" style="width:100%">
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
-        <img src="c.jpeg"  alt="Fjords" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+        <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+        <img src="c.jpeg" alt="Lights" style="width:100%">
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
@@ -316,37 +384,65 @@
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
+         <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
         <img src="d.jpeg" alt="Lights" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
-        <img src="b.jpeg" alt="Nature" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+        <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+        <img src="b.jpeg" alt="Lights" style="width:100%">
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="#">
-        <img src="a.jpeg"  alt="Fjords" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
+        <div class="container">
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+        <img src="a.jpeg" alt="Lights" style="width:100%">
+    </div>
+    <div class="back" style="background: #2184cd;
+    color: #fff;
+    text-align: center;">
+     <h1 >Yo!!!!</h1>
+    </div>
+  </div>
+</div>
+</div>
       </a>
     </div>
   </div>
 </div>
 </section>
-
-
 <section id="typeformM" class="container">
 
 <!-- Change the width and height values to suit you best -->
