@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   $('.anim').mouseenter(function() {
+   /*$('.anim').mouseenter(function() {
        $(this).animate({
            height: '+=10px'
            

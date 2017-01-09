@@ -159,27 +159,38 @@
 
 <body style="width:100%;height:100%;">
 
-<nav class="navbar navbar-inverse navbar-fixed-top navbar-collapse collapse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid anim">  
-    <div class="anim navbar-header navbar-left">
-      <a class="navbar-brand navbar-left" href="#"> GUSAC</a>
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-home faa-float animated"></i> Home</a>
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-bug faa-flash animated"></i> Events</a>
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-cog fa-spin"></i> Workshops</a>
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+<a class="navbar-brand" href="#home">GUSAC</a>
+    <img src="logo2.png" class="profile-image img-circle brand navbar-header img-responsive fa fa-spin"  href="#home">
     </div>
     
-    <img src="logo2.png" class="profile-image img-circle brand navbar-header img-responsive fa fa-spin"  href="#">
-   
-    <div class="navbar-right anim" >
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-camera faa-shake animated"></i> Gallery</a>
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-space-shuttle faa-passing animated"></i> Register</a>
-      <a class="navbar-link navbar-text navbar-left navbar-btn"><i class="fa fa-phone-square faa-ring animated"></i> Contact Us</a>
-    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+    <ul class="nav navbar-nav navbar-left">
+        <li class="active"><a href="#home"><i class="fa fa-home faa-float animated"></i> Home</a></li>
+        <li><a href="#events"><i class="fa fa-bug faa-flash animated"></i> Events</a></li>
+        <li><a href="#workshops"><i class="fa fa-cog fa-spin"></i> Workshops</a></li> 
+      </ul>
+            <ul class="nav navbar-nav navbar-right">
+        <li><a href="#gallery"><i class="fa fa-camera faa-shake animated"></i> Gallery</a></li>
+        <li><a href="#contact"><i class="fa fa-space-shuttle faa-passing animated"></i> Register</a></li>
+        <li><a href="#contact"><i class="fa fa-phone-square faa-ring animated"></i> Contact US</a></li>
+      </ul>
+          
+      </div>
   </div>
 </nav>
 
  
- <section class="container-fluid h-100 w-100">
+ <section class="container-fluid h-100 w-100" id="home">
      
             <div class="container">
                 <div class="row">
@@ -310,7 +321,7 @@
 
 
 
-<section id="Events" class="h-100 container">
+<section id="events" class="h-100 container">
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
@@ -379,7 +390,7 @@
 
 
 
-<section id="Workshops" class="container">
+<section id="workshops" class="container">
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
@@ -443,7 +454,7 @@
   </div>
 </div>
 </section>
-<section id="typeformM" class="container">
+<section id="contact" class="container">
 
 <!-- Change the width and height values to suit you best -->
 <div class="typeform-widget" data-url="https://surenderharsha.typeform.com/to/RDnpOA" data-text="Gusac Registration" style="width:100%;height:500px;"></div>
