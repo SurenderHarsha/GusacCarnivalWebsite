@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+
+    $(this).scrollTop(0);
+      $.scrollLock(true);
+    
    /*$('.anim').mouseenter(function() {
        $(this).animate({
            height: '+=10px'
@@ -21,8 +26,10 @@ $(document).ready(function() {
     overflow: 'hidden',
     height: '100%'
 });*/
-   $('#lol').click(function(){
 
+
+   $('#lol').click(function(){
+    $.scrollLock(false);
     $('html, body').animate({
         scrollTop: $("#gallery").offset().top
     }, 2000);
@@ -31,8 +38,7 @@ $(document).ready(function() {
 });
   $(".project").hover3d({
   selector: ".project__card",
-  shine: true,
-  invert:true
+  shine: true
 });
 
    
